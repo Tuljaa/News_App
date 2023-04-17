@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import TableData from './components/TableData';
+import NavBar from './components/NavBar';
+import { useRef } from 'react';
 
 function App() {
+  const searchRef = useRef(null);
+  const handleSearch = () => {
+    const doc = searchRef.current
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        NEWS BROADCAST
+        <input type='search' placeholder='SEARCH' 
+        className='searchBar' 
+        onClick={handleSearch}
+        ref={searchRef}
+        />
       </header>
+      <div className='section-nav'>
+        <nav>
+          <NavBar />
+        </nav>
+        <section>
+          <TableData />
+        </section>
+      </div>
     </div>
   );
 }

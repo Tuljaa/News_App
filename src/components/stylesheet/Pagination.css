@@ -1,0 +1,25 @@
+.paginate-css {
+    display: flex;
+    height: 10%;
+    padding: 5%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(151, 145, 86);
+    width: inherit;
+    
+    flex-wrap: wrap;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.page-numbers{
+    font-size: large;
+    border: 1px solid black;
+    border-radius: 20%;
+    padding: 1%;
+}
+
+.page-numbers:hover {
+    background-color: black;
+    color: white;
+}
